@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retiro de Intercesores 2025 - Imparables</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+    
+    </style>
+  </head>
+  <body>
+    <!-- Splash inicial -->
+    <div id="splash">
+      <h1>Retiro de Intercesores 2025</h1>
+      <p>“IMPARABLES”</p>
+    </div>
+
+    <header class="hero">
+      <div class="overlay"></div>
+      <h1>Retiro de Intercesores 2025</h1>
+      <p class="theme">“IMPARABLES”</p>
+    </header>
+
+    <main>
+      <section class="tabs">
+        <nav class="tab-buttons" aria-label="Programa del retiro">
+          <button class="active" onclick="openTab(event, 'friday')">
+            Viernes
+          </button>
+          <button onclick="openTab(event, 'saturday')">Sábado</button>
+          <button onclick="openTab(event, 'sunday')">Domingo</button>
+        </nav>
+
+        <!-- Viernes -->
+        <section id="friday" class="tab-content friday active">
+          <h2>Viernes</h2>
+          <ul class="schedule">
+            <li>
+              <article class="event">
+                <time datetime="2025-03-07T16:30">16:30 h</time>
+                <p>Recepción de inscripciones</p>
+              </article>
+            </li>
+            <li>
+              <article class="event">
+                <p>Cena</p>
+              </article>
+            </li>
+            <li>
+              <article class="event">
+                <time datetime="2025-03-07T21:00">21:00 h</time>
+                <p>Culto</p>
+              </article>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Sábado -->
+        <section id="saturday" class="tab-content saturday">
+          <h2>Sábado</h2>
+          <ul class="schedule">
+            <li>
+              <article class="event"><p>Desayuno</p></article>
+            </li>
+            <li>
+              <article class="event">
+                <time datetime="2025-03-08T10:00">10:00 h</time>
+                <p>Culto</p>
+              </article>
+            </li>
+            <li>
+              <article class="event"><p>Descanso</p></article>
+            </li>
+            <li>
+              <article class="event">
+                <time datetime="2025-03-08T12:30">12:30 h</time>
+                <p>Tiempo especial</p>
+              </article>
+            </li>
+            <li>
+              <article class="event"><p>Comida</p></article>
+            </li>
+            <li>
+              <article class="event">
+                <time datetime="2025-03-08T17:30">17:30 h</time>
+                <p>Culto</p>
+              </article>
+            </li>
+            <li>
+              <article class="event"><p>Cena</p></article>
+            </li>
+            <li>
+              <article class="event"><p>Oración y/o tiempo libre</p></article>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Domingo -->
+        <section id="sunday" class="tab-content sunday">
+          <h2>Domingo</h2>
+          <ul class="schedule">
+            <li>
+              <article class="event"><p>Desayuno</p></article>
+            </li>
+            <li>
+              <article class="event">
+                <time datetime="2025-03-09T10:30">10:30 h</time>
+                <p>Santa Cena</p>
+              </article>
+            </li>
+            <li>
+              <article class="event"><p>Culto</p></article>
+            </li>
+            <li>
+              <article class="event"><p>Clausura</p></article>
+            </li>
+            <li>
+              <article class="event">
+                <time datetime="2025-03-09T13:00">13:00 h</time>
+                <p>Comida</p>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <script>
+      // Splash animation
+      window.addEventListener("load", () => {
+        const splash = document.getElementById("splash");
+        setTimeout(() => {
+          splash.style.opacity = "0";
+          document.body.classList.add("loaded");
+          setTimeout(() => (splash.style.display = "none"), 1000);
+        }, 2000);
+      });
+
+      // Tabs
+      function openTab(evt, tabId) {
+        const contents = document.querySelectorAll(".tab-content");
+        const buttons = document.querySelectorAll(".tab-buttons button");
+        contents.forEach((c) => c.classList.remove("active"));
+        buttons.forEach((b) => b.classList.remove("active"));
+        document.getElementById(tabId).classList.add("active");
+        evt.currentTarget.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
