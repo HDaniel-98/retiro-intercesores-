@@ -132,7 +132,7 @@ header.hero .theme {
 
 .welcome h2 {
   font-size: 1.8rem;
-  color: #e3c531;
+  color: #ffd95a;
   margin-bottom: 1rem;
 }
 
@@ -235,3 +235,4 @@ body.loaded header.hero {
     font-size: 0.9rem;
   }
 }
+
