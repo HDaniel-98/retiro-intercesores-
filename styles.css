@@ -1,181 +1,237 @@
-  /* === Splash screen === */
-      #splash {
-        position: fixed;
-        inset: 0;
-        background: linear-gradient(135deg, #ffb84d, #ffd95a);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-family: "Poppins", sans-serif;
-        text-align: center;
-        z-index: 9999;
-        opacity: 1;
-        transition: opacity 1.3s ease;
-        padding: 1rem;
-      }
-      #splash h1 {
-        font-size: 2.2rem;
-        animation: fadeInDown 1.3s ease;
-      }
-      #splash p {
-        font-style: italic;
-        color: #fff9c4;
-        font-size: 2rem;
-        margin-top: 0.5rem;
-        animation: fadeInUp 1.3s ease;
-      }
-      @keyframes fadeInDown {
-        from {
-          opacity: 0;
-          transform: translateY(-70px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+/* === Splash screen === */
+#splash {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #ffb84d, #ffd95a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1.3s ease;
+  padding: 1rem;
+}
+#splash h1 {
+  font-size: 2.2rem;
+  animation: fadeInDown 1.3s ease;
+}
+#splash p {
+  font-style: italic;
+  color: rgb(32, 32, 89);
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  animation: fadeInUp 1.3s ease;
+}
+/* logo */
+.logo-splash {
+  width: 120px;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.2s ease;
+}
+/* logo header */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
 
-      /* === Layout base === */
-      body {
-        margin: 0;
-        font-family: "Poppins", sans-serif;
-        background: #fdfaf6;
-        color: #333;
-      }
-      header.hero {
-        position: relative;
-        background: linear-gradient(135deg, #ffd95a, #ffb84d);
-        text-align: center;
-        color: white;
-        padding: 4rem 1rem 3rem;
-        overflow: hidden;
-      }
-      header.hero .overlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.3);
-      }
-      header.hero h1,
-      header.hero p {
-        position: relative;
-        z-index: 1;
-      }
-      header.hero h1 {
-        font-size: 2.2rem;
-        margin: 0;
-      }
-      header.hero .theme {
-        font-style: italic;
-        color: #fff9c4;
-        margin-top: 0.5rem;
-      }
+.logo {
+  width: 100px;
+  height: auto;
+  animation: fadeInDown 1.5s ease-in-out;
+}
 
-      /* Tabs */
-      .tabs {
-        margin: 2rem auto;
-        max-width: 700px;
-        text-align: center;
-      }
-      .tab-buttons {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-      }
-      .tab-buttons button {
-        background: #fff;
-        border: 2px solid #ffc94d;
-        border-radius: 25px;
-        padding: 0.6rem 1.2rem;
-        cursor: pointer;
-        font-weight: 600;
-        transition: all 0.3s ease;
-      }
-      .tab-buttons button.active {
-        background: linear-gradient(135deg, #ffcc4d, #ffa94d);
-        color: #fff;
-      }
-      .tab-buttons button:hover {
-        transform: scale(1.05);
-      }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-      /* Contenido de cada día */
-      .tab-content {
-        display: none;
-        background: #fff;
-        border-radius: 15px;
-        padding: 2rem;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        text-align: left;
-      }
-      .tab-content.active {
-        display: block;
-        animation: fadeIn 0.8s ease;
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      h2 {
-        text-align: center;
-        color: #ffb84d;
-      }
-      ul.schedule {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .event {
-        border-left: 3px solid #ffd95a;
-        padding-left: 1rem;
-        margin-bottom: 1rem;
-      }
-      .event time {
-        display: block;
-        font-weight: 600;
-        color: #555;
-      }
-      .event p {
-        margin: 0.2rem 0 0;
-      }
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-      /* Ocultar contenido mientras carga */
-      main,
-      header.hero {
-        opacity: 0;
-        transition: opacity 1s ease;
-      }
-      body.loaded main,
-      body.loaded header.hero {
-        opacity: 1;
-      }
+/* === Layout base === */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+    background-color: #fffaf3;
+  color: #333;
+}
+header.hero {
+  position: relative;
 
-      @media (max-width: 600px) {
-        .tab-buttons {
-          flex-direction: row;
-          gap: 0.3rem;
-        }
-        .tab-buttons button {
-          flex: 1;
-          padding: 0.5rem;
-          font-size: 0.9rem;
-        }
-      }
+  background: linear-gradient(135deg, #ffd95a, #ffb84d);
+  text-align: center;
+  color: white;
+  padding: 4rem 1rem 3rem;
+  overflow: hidden;
+}
+header.hero .overlay {
+  position: absolute;
+  inset: 0;
+}
+header.hero h1,
+header.hero p {
+  position: relative;
+  z-index: 1;
+}
+header.hero h1 {
+  font-size: 2.2rem;
+  margin: 0;
+}
+header.hero .theme {
+  font-weight: normal;
+  color: #fff9c4;
+  margin-top: 0.7rem;
+  font-size: 1.4rem;
+  color: rgb(32, 32, 89);
+}
+
+/* Saludo */
+.welcome {
+  text-align: center;
+  background-color: #fff9e6;
+
+  backdrop-filter: blur(6px);
+  padding: 0.5rem 1.5rem;
+  margin: 1rem auto;
+  border-radius: 1.5rem;
+  max-width: 800px;
+
+  line-height: 1.7;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.welcome h2 {
+  font-size: 1.8rem;
+  color: #e3c531;
+  margin-bottom: 1rem;
+}
+
+/* Tabs */
+.tabs {
+  margin: 2rem auto;
+  max-width: 700px;
+  text-align: center;
+  padding: 1rem;
+}
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.tab-buttons button {
+  background: #fff;
+  border: 2px solid #ffc94d;
+  border-radius: 25px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.tab-buttons button.active {
+  background: linear-gradient(135deg, #ffcc4d, #ffa94d);
+  color: #fff;
+}
+.tab-buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* Contenido de cada día */
+.tab-content {
+  display: none;
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.8s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+h2 {
+  text-align: center;
+  color: #ffb84d;
+  font-size: 2.5rem;
+}
+ul.schedule {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.event {
+  border-left: 3px solid #ffd95a;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+.event time {
+  display: block;
+  font-weight: 600;
+  color: #555;
+}
+.event p {
+  margin: 0.2rem 0 0;
+}
+
+/* Ocultar contenido mientras carga */
+main,
+header.hero {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+body.loaded main,
+body.loaded header.hero {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .tab-buttons {
+    flex-direction: row;
+    gap: 0.3rem;
+  }
+  .tab-buttons button {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
