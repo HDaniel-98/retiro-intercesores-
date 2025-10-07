@@ -107,6 +107,10 @@ header.hero h1 {
   font-size: 2.2rem;
   margin: 0;
 }
+header.hero h2{
+  color: #fff;
+  font-size: 2rem;
+}
 header.hero .theme {
   font-weight: normal;
   color: #fff9c4;
@@ -117,7 +121,7 @@ header.hero .theme {
 
 /* Saludo */
 .welcome {
-  text-align: center;
+  text-align: justify;
   background-color: #fff9e6;
 
   backdrop-filter: blur(6px);
@@ -125,11 +129,14 @@ header.hero .theme {
   margin: 1rem auto;
   border-radius: 1.5rem;
   max-width: 800px;
-
+ font-size: 1.2rem;
   line-height: 1.7;
   animation: fadeIn 1.5s ease-in;
 }
-
+.welcome span{
+  font-weight: bold;
+  text-align: center;
+}
 .welcome h2 {
   font-size: 1.8rem;
   color: #ffd95a;
@@ -141,7 +148,7 @@ header.hero .theme {
   margin: 2rem auto;
   max-width: 700px;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .tab-buttons {
   display: flex;
@@ -198,19 +205,22 @@ ul.schedule {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-size: 1.3rem;
 }
 .event {
-  border-left: 3px solid #ffd95a;
+  border-left: 5px solid #ffd95a;
   padding-left: 1rem;
   margin-bottom: 1rem;
 }
 .event time {
   display: block;
-  font-weight: 600;
+  font-weight: 800;
   color: #555;
+
 }
 .event p {
   margin: 0.2rem 0 0;
+  font-weight: 500;
 }
 
 /* Ocultar contenido mientras carga */
@@ -235,4 +245,3 @@ body.loaded header.hero {
     font-size: 0.9rem;
   }
 }
-
