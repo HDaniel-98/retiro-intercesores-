@@ -155,6 +155,7 @@ header.hero .theme {
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 .tab-buttons button {
   background: #fff;
